@@ -32,9 +32,10 @@ void topView(Node* root){
     queue<pair<Node*,int>> q;
     map<int,int> m;
     q.push({root,0});
+    int currHD;
     while(q.size()>0){
         Node* curr=q.front().first;
-        int currHD=q.front().second;
+        currHD=q.front().second;
         q.pop();
         if(m.find(currHD)==m.end()){
             m[currHD]=curr->data;
